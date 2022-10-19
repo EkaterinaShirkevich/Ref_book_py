@@ -1,16 +1,17 @@
 import csv
+from encodings import utf_8
 import shutil
 
 
 # сохранение данных в файл
 def save_data(data, rec_mode):
-	with open('list_contact', rec_mode, newline='') as file:
+	with open('list_contact', rec_mode, newline='', encoding="utf_8") as file:
 		writer = csv.writer(file)
 		writer.writerow(data)
 
 # перезапись существуещего файла
 def rewrite(data_list, rec_mode):
-	with open('list_contact', rec_mode, newline='') as file:
+	with open('list_contact', rec_mode, newline='', encoding="utf_8") as file:
 		for person in data_list:
 			for text in person:
 				if person.index(text) == (len(person) - 1):
