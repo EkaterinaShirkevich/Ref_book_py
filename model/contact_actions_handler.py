@@ -23,5 +23,5 @@ def delete_contact(path):
 			print('=' * 60)
 			imp_c.rewrite(list_contact, 'w')	# перезаписываем в файл новый список, уже без удаленного контакта
 			return
-	print('Контакт : {} {} не найден.'.format(surname, name)) 
+	print('Контакт : {} {} не найден.'.format(surname, name))
 
