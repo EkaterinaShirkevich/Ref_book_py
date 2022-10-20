@@ -23,7 +23,7 @@ def check_input_string(desc: str):
 def check_input_digit(desc: str):
 	while True:
 		val = input('Введите данные в поле "{}" (10 цифр номера, без 7 или 8): '.format(desc))
-		if not val.isdigit() or val.isspace() or 10 > int(val):
+		if not val.isdigit() or val.isspace() or len(val)<10:
 			print('В поле "{}" должны быть только цифры, \nоно должно быть не пустым \nи содержать ровно 10 цифр.'.format(desc))
 			logs.input_logger('Пользователь ввел некорректные данные')
 			continue
