@@ -22,14 +22,14 @@ def check_input_string(desc: str):
 # и запись номера телефона в формате +1-(234)-567-89-01
 def check_input_digit(desc: str):
 	while True:
-		val = input('Введите данные в поле "{}": '.format(desc))
-		if not val.isdigit() or val.isspace() or 11 == int(val):
-			print('В поле "{}" должны быть только цифры, \nоно должно быть не пустым \nи содержать ровно 11 цифр.'.format(desc))
+		val = input('Введите данные в поле "{}" (10 цифр номера, без 7 или 8): '.format(desc))
+		if not val.isdigit() or val.isspace() or 10 > int(val):
+			print('В поле "{}" должны быть только цифры, \nоно должно быть не пустым \nи содержать ровно 10 цифр.'.format(desc))
 			logs.input_logger('Пользователь ввел некорректные данные')
 			continue
 		val_ls = ''.join(filter(str.isdigit, val))
-		return '+{}-({})-{}-{}-{}'.format(val_ls[0], val_ls[1:4], val_ls[4:7], val_ls[7:9], val_ls[9:11])
-		
+		return '+7-({})-{}-{}-{}'.format(val_ls[0:3], val_ls[4:6], val_ls[6:8], val_ls[8:11])
+	
 # проверка ввода числа для пользовательского меню
 def choice_menu_input(max_range):
 	while(True):
