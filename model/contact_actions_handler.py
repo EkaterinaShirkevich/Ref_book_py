@@ -15,7 +15,7 @@ def delete_contact(path):
 	surname = u_in.check_input_string('Фамилия')	# ввод данных контакта 'фамилия'
 	
 	for person in list_contact:	# поиск контакта в полученном списке
-		if name.lower() == person[0].lower() and surname.lower() == person[1].lower() in person:
+		if name.lower() == person[0].lower() and surname.lower() == person[1].lower():
 			index = list_contact.index(person)	# получаем индекс контакта
 			list_contact.pop(index)	# удаляем контакт
 			print('=' * 60)
@@ -24,4 +24,6 @@ def delete_contact(path):
 			imp_c.rewrite(list_contact, 'w')	# перезаписываем в файл новый список, уже без удаленного контакта
 			return
 	print('Контакт : {} {} не найден.'.format(surname, name))
+	
+
 

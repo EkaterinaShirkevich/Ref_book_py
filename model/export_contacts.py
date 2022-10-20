@@ -17,7 +17,7 @@ def show_all_contacts(path):
 	list_contact = read_data(path)	# чтение данных из файла
 	print('\n' * 20)
 	print('=' * 61)
-	print('||', 'фамилия'.center(15),  '||', 'имя'.center(15), '||', 'телефон '.center(15), ' ||')
+	print('||', 'имя'.center(15),  '||', 'фамилия'.center(15), '||', 'телефон '.center(15), ' ||')
 	print('=' * 61)
 	for person in list_contact:
 		print('||', person[0].center(15),  '||', person[1].center(15), '||', person[2].center(15), '||')
