@@ -5,7 +5,7 @@ import model.user_input as u_in
 # чтение из файла и возврат данных в виде списка
 def read_data(path):
 	ex.read_file_except(path)
-	with open(path, "r") as file:
+	with open(path, 'r', encoding='utf-8') as file:
 		reader = csv.reader(file)
 		data_list = []
 		for row in reader:
