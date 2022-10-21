@@ -12,3 +12,5 @@
 * https://github.com/Marassanovad - *разработка (все модули)*
 * https://github.com/Alexey1992Astakhov - *контрольное тестирование*
 * https://github.com/EkaterinaShirkevich - *менеджмент проекта, промежуточное тестирование, разработка (log, исправление мелких багов в других модулях)*
+
+*изменения можно предлагать в ветку new_changes*
