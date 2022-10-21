@@ -28,7 +28,7 @@ def check_input_digit(desc: str):
 			logs.input_logger('Пользователь ввел некорректные данные')
 			continue
 		val_ls = ''.join(filter(str.isdigit, val))
-		return '+7-({})-{}-{}-{}'.format(val_ls[0:3], val_ls[4:6], val_ls[6:8], val_ls[8:11])
+		return '+7-({})-{}-{}-{}'.format(val_ls[0:3], val_ls[3:6], val_ls[6:8], val_ls[8:10])
 	
 # проверка ввода числа для пользовательского меню
 def choice_menu_input(max_range):
